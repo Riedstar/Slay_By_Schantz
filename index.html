@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slay by Schantz - Eyelash Extensions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- For icons -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Slay by Schantz</h1>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Eyelash Extensions</h2>
+            <p>Give your lashes a gorgeous lift. Book your first session today!</p>
+            <a href="#booking" class="cta-button">Book Now</a>
+        </div>
+        <!-- Replace with your flyer image URL -->
+        <div class="hero-bg" style="background: linear-gradient(135deg, #000 0%, #D4AF37 50%, #000 100%);"></div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="C:\Users\Riedwaan\OneDrive\Documents\Slay_With_Schantz\classic_lashes_before and after.jpg" alt="Classic Lashes Before & After" class="transformation-img">
+                <i class="fas fa-eye"></i>
+                <h3>Classic Lashes</h3>
+                <p>One-by-one application for a natural, effortless look that lasts.</p>
+            </div>
+            <div class="service-card">
+                <img src="C:\Users\Riedwaan\OneDrive\Documents\Slay_With_Schantz\hybrid_lashes_before and after.jpg" alt="Hybrid Lashes Before & After" class="transformation-img">
+                <i class="fas fa-layer-group"></i>
+                <h3>Hybrid Lashes</h3>
+                <p>Mix of classic and volume for a soft yet full, customizable style.</p>
+            </div>
+            <div class="service-card">
+                <img src="C:\Users\Riedwaan\OneDrive\Documents\Slay_With_Schantz\volume_lashes_before and after.jpg" alt="Volume Lashes Before & After" class="transformation-img">
+                <i class="fas fa-star"></i>
+                <h3>Volume Lashes</h3>
+                <p>Fanned clusters for dramatic, bold volume—turn heads instantly.</p>
+            </div>
+            <div class="service-card">
+                <img src="C:\Users\Riedwaan\OneDrive\Documents\Slay_With_Schantz\multicolor-lashes_before and after.jpg" alt="Multi-Color Lashes Before & After" class="transformation-img">
+                <i class="fas fa-palette"></i>
+                <h3>Multi-Color Lashes</h3>
+                <p>Fun pops of color for a playful, unique vibe—perfect for events.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <h2>Book Your Session</h2>
+        <form id="bookingForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone (e.g., 083-211-0828)" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="classic">Classic Lashes</option>
+                <option value="hybrid">Hybrid Lashes</option>
+                <option value="volume">Volume Lashes</option>
+                <option value="multicolor">Multi-Color Lashes</option>
+            </select>
+            <input type="date" name="date" required>
+            <textarea name="notes" placeholder="Any notes or preferences?"></textarea>
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> 083-211-0828</p>
+            <p><i class="fab fa-instagram"></i> @slaybyschantz</p>
+            <p>Ready to slay? DM us for quick questions!</p>
+        </div>
+        <!-- Quick message form -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Slay by Schantz. Made with love.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
