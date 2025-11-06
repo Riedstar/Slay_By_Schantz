@@ -23,21 +23,5 @@ document.querySelectorAll('form').forEach(form => {
         setTimeout(() => {
             alert('Thanks! We\'ll get back to you soon.');
         }, 1000);
-		
-		document.querySelectorAll('.image-slider').forEach(slider => {
-    let isAfter = false;
-    slider.addEventListener('click', () => {
-        const before = slider.querySelector('.before');
-        const after = slider.querySelector('.after');
-        if (isAfter) {
-            before.style.opacity = 1;
-            after.style.opacity = 0;
-        } else {
-            before.style.opacity = 0;
-            after.style.opacity = 1;
-        }
-        isAfter = !isAfter;
-    });
-});
     });
 });
