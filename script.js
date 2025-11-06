@@ -23,4 +23,14 @@ document.querySelectorAll('form').forEach(form => {
             alert('Thanks! We\'ll get back to you soon.');
         }, 1000);
     });
+    // Time slot validation
+const bookingDate = document.getElementById('bookingDate');
+const bookingTime = document.getElementById('bookingTime');
+bookingDate.addEventListener('change', () => {
+    bookingTime.required = !!bookingDate.value; // Required only if date selected
+    if (bookingDate.value) {
+        bookingTime.classList.add('show'); // Optional CSS for fade-in
+    }
 });
+});
+
