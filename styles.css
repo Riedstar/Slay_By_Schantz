@@ -74,6 +74,16 @@ body {
     overflow: hidden;
     padding-top: 70px; /* Space for fixed nav */
 }
+
+.hero h2 {
+    /* Existing... */
+    animation: lashGlow 3s ease-in-out infinite alternate;
+}
+@keyframes lashGlow {
+    0% { text-shadow: 0 0 10px rgba(212,175,55,0.5); }
+    100% { text-shadow: 0 0 30px rgba(212,175,55,1), 0 0 40px rgba(212,175,55,0.3); }
+}
+
 .hero-bg {
     position: absolute;
     top: 0;
@@ -298,3 +308,4 @@ footer {
 }
 
 }
+
