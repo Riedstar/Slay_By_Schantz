@@ -326,6 +326,17 @@ footer {
     box-shadow: 0 0 10px rgba(212,175,55,0.3);
 }
 
+.success-message {
+    text-align: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(145deg, rgba(212,175,55,0.1), rgba(212,175,55,0.05));
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 10px;
+    margin: 1rem 0;
+    color: #fff;
+    font-weight: bold;
+
 }
+
 
 
