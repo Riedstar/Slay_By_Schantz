@@ -15,22 +15,36 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Form success message (optional)
+// Form submission with animated success message
 document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function() {
-        // Redirect or show alert on success (Formspree handles submission)
-        setTimeout(() => {
-            alert('Thanks! We\'ll get back to you soon.');
-        }, 1000);
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default to handle response
+        const formData = new FormData(this);
+        fetch(this.action, {
+            method: 'POST',
+            body: formData
+        }).then(response => response.text())
+          .then(data => {
+              // Clear form
+              this.reset();
+              // Show animated message
+              const successDiv = this.id === 'bookingForm' ? document.getElementById('bookingSuccess') : document.getElementById('contactSuccess');
+              successDiv.style.display = 'block';
+              successDiv.style.opacity = '0';
+              successDiv.style.transform = 'translateY(20px)';
+              successDiv.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+              setTimeout(() => {
+                  successDiv.style.opacity = '1';
+                  successDiv.style.transform = 'translateY(0)';
+              }, 100);
+              // Hide after 5s
+              setTimeout(() => {
+                  successDiv.style.opacity = '0';
+                  setTimeout(() => successDiv.style.display = 'none', 500);
+              }, 5000);
+          }).catch(err => {
+              console.error('Form error:', err);
+              alert('Oops—something went wrong. DM us on IG!');
+          });
     });
-    // Time slot validation
-const bookingDate = document.getElementById('bookingDate');
-const bookingTime = document.getElementById('bookingTime');
-bookingDate.addEventListener('change', () => {
-    bookingTime.required = !!bookingDate.value; // Required only if date selected
-    if (bookingDate.value) {
-        bookingTime.classList.add('show'); // Optional CSS for fade-in
-    }
 });
-});
-
