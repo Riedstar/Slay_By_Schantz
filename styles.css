@@ -139,6 +139,25 @@ body {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(212,175,55,0.5);
 }
+
+.cta-button:active {
+    position: relative;
+}
+.cta-button:active::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+    background: radial-gradient(circle, #D4AF37 0%, transparent 70%);
+    border-radius: 50%;
+    animation: sparkle 0.6s ease-out;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+@keyframes sparkle {
+    0% { width: 0; height: 0; opacity: 1; }
+    100% { width: 200px; height: 200px; opacity: 0; }
+}
 /* Sections */
 section {
     padding: 5rem 2rem;
@@ -308,4 +327,5 @@ footer {
 }
 
 }
+
 
