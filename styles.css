@@ -204,8 +204,9 @@ h2 {
 .transformation-img {
     width: 100%;
     max-width: 100%;
-    height: 180px; /* Desktop height */
-    object-fit: cover; /* Crops to fill—good for square splits */
+    height: 180px; /* Desktop: Bold crop for impact */
+    object-fit: cover; /* Fills frame, crops edges */
+    object-position: center top; /* Prioritizes eyes/lashes */
     border-radius: 10px;
     margin-bottom: 1rem;
     display: block;
@@ -213,16 +214,27 @@ h2 {
     border: 1px solid rgba(212,175,55,0.3); /* Gold frame */
 }
 
-/* Mobile Fix: Shorter height, contain fit to show full image */
-@media (max-width: 768px) {
-    .transformation-img {
-        height: 140px; /* Shorter for phone—less crop */
-        object-fit: contain; /* Shows full image, adds subtle padding if aspect ratio differs */
-        object-position: center top; /* Focus on eyes/top of lashes */
-    }
-}
 .service-card:hover .transformation-img {
     transform: scale(1.02);
+}
+
+/* Mobile Fix: Full View, No Crop on iPhone 14 (390x844) */
+@media (max-width: 414px) { /* Targets iPhone 14 width */
+    .transformation-img {
+        height: 140px; /* Shorter for portrait—fits thumb scroll */
+        object-fit: contain; /* Shows full image, no chop—letterbox if tall */
+        object-position: center top; /* Eyes at top */
+    }
+    
+    .service-card {
+        padding: 1rem; /* Slimmer card on mobile */
+    }
+    
+    .service-card i {
+        font-size: 2.5rem; /* Slightly smaller icon */
+    }
+}
+
 }
 /* Booking & Contact */
 .booking, .contact {
@@ -346,6 +358,7 @@ footer {
     font-weight: bold;
 
 }
+
 
 
 
