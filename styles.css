@@ -204,9 +204,9 @@ h2 {
 .transformation-img {
     width: 100%;
     max-width: 100%;
-    height: 180px; /* Desktop: Bold crop for impact */
-    object-fit: cover; /* Fills frame, crops edges */
-    object-position: center top; /* Prioritizes eyes/lashes */
+    height: 180px; /* Desktop: Bold crop */
+    object-fit: cover; /* Fills full area, crops edges */
+    object-position: center; /* Centers on eyes/lashes */
     border-radius: 10px;
     margin-bottom: 1rem;
     display: block;
@@ -218,19 +218,19 @@ h2 {
     transform: scale(1.02);
 }
 
-/* Mobile Fix: Full View, No Crop on iPhone 14 & Similar (Portrait) */
-@media (max-width: 480px) { /* Covers iPhone 14 (390px) and up to small tablets */
+/* Mobile Fill: Full Width, No Gaps on iPhone 14 Portrait */
+@media (max-width: 480px) { /* iPhone 14 & similar */
     .transformation-img {
-        height: auto; /* Fluid height—no fixed crop */
-        max-height: 140px; /* Caps for thumb-scroll fit */
-        object-fit: contain; /* Shows full image—no chop, adds padding if tall */
-        object-position: center top; /* Eyes at top */
+        height: 160px; /* Taller for full fill without too much crop */
+        object-fit: cover; /* Stretches to edges—no side space */
+        object-position: center top; /* Focus on lashes/eyes */
+        border-radius: 8px; /* Slightly less round for edge blend */
     }
     
     .service-card {
-        padding: 1rem; /* Slimmer card padding on mobile */
-        min-height: auto; /* Lets cards breathe without fixed height */
+        padding: 0.5rem; /* Tighter padding to let image breathe */
     }
+}
     
     .service-card i {
         font-size: 2.5rem; /* Smaller icon to balance */
@@ -370,6 +370,7 @@ footer {
     font-weight: bold;
 
 }
+
 
 
 
