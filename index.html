@@ -62,54 +62,51 @@
             </div>
         </div>
     </section>
-       <section id="booking" class="booking">
-    <h2>Book Your Session</h2>
-    <form id="bookingForm" action="https://script.google.com/macros/s/AKfycbzMN9w5OrEpBqTbR-lhnSwgDgeDrAcf3iBboAJesV3t03CyPulS2BXiQMe7m3ScSFKgCA/exec" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Phone (e.g., 083-211-0828)" required>
-        <select name="service" required>
-            <option value="">Select Service</option>
-            <option value="classic">Classic Lashes</option>
-            <option value="hybrid">Hybrid Lashes</option>
-            <option value="volume">Volume Lashes</option>
-            <option value="multicolor">Multi-Color Lashes</option>
-        </select>
-        <input type="date" name="date" id="bookingDate" required>
-        <select name="time" id="bookingTime" required>
-            <option value="">Select Time Slot (2-Hour Session)</option>
-            <option value="09:00">9:00 AM - 11:00 AM</option>
-            <option value="11:00">11:00 AM - 1:00 PM</option>
-            <option value="13:00">1:00 PM - 3:00 PM</option>
-            <option value="15:00">3:00 PM - 5:00 PM</option>
-        </select>
-        <textarea name="notes" placeholder="Any notes or preferences? (2-hour session booked)"></textarea>
-        <button type="submit">Submit Booking</button>
-    </form>
-    <div id="bookingSuccess" class="success-message" style="display: none;">
-        <p>We received your appointment! 🎉 We'll confirm within 24 hours—get ready to slay.</p>
-    </div>
-</section>
-<section id="contact" class="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-info">
-        <p><i class="fas fa-phone"></i> 083-211-0828</p>
-        <p><i class="fab fa-instagram"></i> @slaybyschantz</p>
-        <p>Ready to slay? DM us for quick questions!</p>
-    </div>
-    <!-- Quick message form -->
-    <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzMN9w5OrEpBqTbR-lhnSwgDgeDrAcf3iBboAJesV3t03CyPulS2BXiQMe7m3ScSFKgCA/exec" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <div id="contactSuccess" class="success-message" style="display: none;">
-        <p>Appointent Received! We'll reply soon......keep slaying. ✨</p>
-
-        <!-- Deploy fix - Nov 11, 2025 -->
-    </div>
-</section>
+    <section id="booking" class="booking">
+        <h2>Book Your Session</h2>
+        <form id="bookingForm" action="https://script.google.com/macros/s/AKfycbzMN9w5OrEpBqTbR-lhnSwgDgeDrAcf3iBboAJesV3t03CyPulS2BXiQMe7m3ScSFKgCA/exec" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone (e.g., 083-211-0828)" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option value="classic">Classic Lashes</option>
+                <option value="hybrid">Hybrid Lashes</option>
+                <option value="volume">Volume Lashes</option>
+                <option value="multicolor">Multi-Color Lashes</option>
+            </select>
+            <input type="date" name="date" id="bookingDate" required>
+            <select name="time" id="bookingTime" required>
+                <option value="">Select Time Slot (2-Hour Session)</option>
+                <option value="09:00">9:00 AM - 11:00 AM</option>
+                <option value="11:00">11:00 AM - 1:00 PM</option>
+                <option value="13:00">1:00 PM - 3:00 PM</option>
+                <option value="15:00">3:00 PM - 5:00 PM</option>
+            </select>
+            <textarea name="notes" placeholder="Any notes or preferences? (2-hour session booked)"></textarea>
+            <button type="submit">Submit Booking</button>
+        </form>
+        <div id="bookingSuccess" class="success-message" style="display: none;">
+            <p>We received your appointment! 🎉 We'll confirm within 24 hours—get ready to slay.</p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> 083-211-0828</p>
+            <p><i class="fab fa-instagram"></i> @slaybyschantz</p>
+            <p>Ready to slay? DM us for quick questions!</p>
+        </div>
+        <!-- Quick message form -->
+        <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzMN9w5OrEpBqTbR-lhnSwgDgeDrAcf3iBboAJesV3t03CyPulS2BXiQMe7m3ScSFKgCA/exec" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="contactSuccess" class="success-message" style="display: none;">
+            <p>Message sent! We'll reply soon—keep slaying. ✨</p>
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 Slay by Schantz. Made with love.</p>
@@ -117,5 +114,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
