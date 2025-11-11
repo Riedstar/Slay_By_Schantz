@@ -218,21 +218,33 @@ h2 {
     transform: scale(1.02);
 }
 
-/* Mobile Fix: Full View, No Crop on iPhone 14 (390x844) */
-@media (max-width: 414px) { /* Targets iPhone 14 width */
+/* Mobile Fix: Full View, No Crop on iPhone 14 & Similar (Portrait) */
+@media (max-width: 480px) { /* Covers iPhone 14 (390px) and up to small tablets */
     .transformation-img {
-        height: 140px; /* Shorter for portrait—fits thumb scroll */
-        object-fit: contain; /* Shows full image, no chop—letterbox if tall */
+        height: auto; /* Fluid height—no fixed crop */
+        max-height: 140px; /* Caps for thumb-scroll fit */
+        object-fit: contain; /* Shows full image—no chop, adds padding if tall */
         object-position: center top; /* Eyes at top */
     }
     
     .service-card {
-        padding: 1rem; /* Slimmer card on mobile */
+        padding: 1rem; /* Slimmer card padding on mobile */
+        min-height: auto; /* Lets cards breathe without fixed height */
     }
     
     .service-card i {
-        font-size: 2.5rem; /* Slightly smaller icon */
+        font-size: 2.5rem; /* Smaller icon to balance */
     }
+    
+    .service-card h3 {
+        font-size: 1.1rem; /* Tighter title */
+    }
+    
+    .service-card p {
+        font-size: 0.9rem; /* Compact description */
+        line-height: 1.3; /* Less spacing */
+    }
+
 }
 
 }
@@ -358,6 +370,7 @@ footer {
     font-weight: bold;
 
 }
+
 
 
 
