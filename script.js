@@ -46,5 +46,22 @@ document.querySelectorAll('form').forEach(form => {
               console.error('Form error:', err);
               alert('Oops—something went wrong. DM us on IG!');
           });
+        // Mobile image swap: After-only for clean fit
+function swapToMobileImages() {
+    if (window.innerWidth < 768) { // iPhone & small screens
+        document.querySelectorAll('.transformation-img').forEach(img => {
+            const alt = img.alt;
+            if (alt.includes('Classic')) img.src = 'images/classic_lashes_after_mobile.jpg';
+            else if (alt.includes('Hybrid')) img.src = 'images/hybrid_lashes_after_mobile.jpg';
+            else if (alt.includes('Volume')) img.src = 'images/volume_lashes_after_mobile.jpg';
+            else if (alt.includes('Multi-Color')) img.src = 'images/multicolor_lashes_after_mobile.jpg';
+        });
+    }
+}
+
+// Run on load and resize
+window.addEventListener('load', swapToMobileImages);
+window.addEventListener('resize', swapToMobileImages);
     });
 });
+
