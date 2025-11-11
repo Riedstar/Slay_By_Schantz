@@ -44,21 +44,7 @@ document.querySelectorAll('form').forEach(form => {
               }, 5000);
           }).catch(err => {
               console.error('Form error:', err);
-              alert('Oops—something went wrong. DM us on IG!');
+              alert('Oops—connection hiccup. DM @slaybyschantz!');
           });
-       // Mobile: Swap to after-only images for full, uncropped view
-function swapToAfterImages() {
-    if (window.innerWidth < 768) { // iPhone & small screens
-        document.querySelectorAll('.transformation-img').forEach(img => {
-            const alt = img.alt.toLowerCase();
-            if (alt.includes('classic')) img.src = 'images/classic_lashes_after_mobile.jpg';
-            else if (alt.includes('hybrid')) img.src = 'images/hybrid_lashes_after_mobile.jpg';
-            else if (alt.includes('volume')) img.src = 'images/volume_lashes_after_mobile.jpg';
-            else if (alt.includes('multi-color')) img.src = 'images/multicolor_lashes_after_mobile.jpg';
-        });
-    }
-}
-
-// Run on load and resize
-window.addEventListener('load', swapToAfterImages);
-window.addEventListener('resize', swapToAfterImages);
+    });
+});
